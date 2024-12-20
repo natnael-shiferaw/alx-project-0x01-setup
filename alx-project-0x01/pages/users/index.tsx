@@ -1,8 +1,13 @@
+import Header from '@/components/layout/Header'
 import React from 'react'
+
 
 function index() {
   return (
-    <div>index</div>
+    <>
+      <Header />
+      <div>index</div>
+    </>
   )
 }
 
