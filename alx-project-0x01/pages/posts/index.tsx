@@ -7,6 +7,7 @@ import { useState } from "react";
 const Posts: React.FC<{ posts: PostProps[] }> = ({ posts }) => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [allPosts, setAllPosts] = useState<PostProps[]>(posts); // State for managing all posts
+  const [post, setPost] = useState<PostData | null>(null);
 
   const handleAddPost = (newPost: PostData) => {
     const updatedPosts = [...allPosts, { ...newPost, id: allPosts.length + 1 }];
